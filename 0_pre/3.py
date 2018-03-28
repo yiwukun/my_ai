@@ -1,3 +1,8 @@
+import io
+import sys
+#改变标准输出的默认编码
+sys.stdout=io.TextIOWrapper(sys.stdout.buffer,encoding='utf8')
+
 class Celsius:
     def __init__(self , value=26.0):
         self.value = float(value)
