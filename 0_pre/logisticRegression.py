@@ -24,8 +24,9 @@ def costfunction(y,h):
 # get matrix of x, y for gradient descent algorithm:
 def convertToMatrixForGraDesent(x, y):
     m,n = shape(x)     #m: number of training example; n: number of features
-    x = c_[ones(m),x]     #add x0        
-    x = mat(x)      # to matrix
+    x = c_[ones(m),x]     #add x0 = 1    
+    #np.c_[np.array([[1,2,3]]), 0, 0, np.array([[4,5,6]])]
+    x = mat(x)      # to matrix    
     y = mat(y)
     return x, y, m, n
 
@@ -86,7 +87,7 @@ def classifyVector(inX,theta):
         return 0.0
 
 if __name__=='__main__':
-    x,y = loadData("D:/python/learning/1_pre/testSet.txt")
+    x,y = loadData("D:/python/projects/AI-learning/my_ai/data/testSet.txt")
     theta,cost = gradescent(x,y)
     print('theta:\n',theta)
     print('J:',cost)
