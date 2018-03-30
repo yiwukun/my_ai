@@ -17,7 +17,7 @@ from sklearn.ensemble import RandomForestClassifier
 from util import learning_curve
 
 # (1) 读取数据集
-data_train = pd.read_csv("D:\\project\\peixun\\ai_course_project_px\\1_intro\\4_anli_project_titanic\\Kaggle_Titanic_Chinese\\Kaggle_Titanic-master\\train.csv")
+data_train = pd.read_csv("data\\train.csv")
 
 # (3) 特特工程 - 类目型的特征离散/因子化
 # 因为逻辑回归建模时，需要输入的特征都是数值型特征

@@ -16,7 +16,7 @@ from sklearn import linear_model
 from sklearn.ensemble import RandomForestClassifier
 from util import set_Cabin_type, set_missing_ages, plot_learning_curve, one_hot_encoding
 # (1) 读取数据集
-data_train = pd.read_csv("D:\\project\\peixun\\ai_course_project_px\\1_intro\\4_anli_project_titanic\\Kaggle_Titanic_Chinese\\Kaggle_Titanic-master\\train.csv")
+data_train = pd.read_csv("data\\train.csv")
 
 # (2) 特征工程 - 处理缺失值
 data_train, rfr = set_missing_ages(data_train)
